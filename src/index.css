@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-snap-type: y proximity;
+  }
+}
+
+/* Ensure font-serif applies to everything by default */
+body {
+  font-family: 'Noto Serif TC', Georgia, serif;
+}
