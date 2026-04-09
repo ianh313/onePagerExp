@@ -54,7 +54,7 @@ export default function Modal({ open, onClose }) {
         </p>
 
         <a
-          href="#"
+          href="https://hello-act-bot.web.app/acts/PFMB5OF7/register"
           target="_blank"
           rel="noopener noreferrer"
           className={[
