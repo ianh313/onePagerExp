@@ -59,7 +59,7 @@ export default function Penang({ onActive }) {
           </span>
           <h2
             {...anim('150ms')}
-            className={anim('150ms').className + ' text-[clamp(1.35rem,2.4vw,2.2rem)] font-bold text-cream leading-[1.45]'}
+            className={anim('150ms').className + ' text-[clamp(1.35rem,2.4vw,2.2rem)] font-bold text-white leading-[1.45]'}
           >
             不是驚豔的大都會，<br />卻讓你流連忘返
           </h2>
@@ -67,10 +67,10 @@ export default function Penang({ onActive }) {
 
         {/* Bottom text */}
         <div className="flex flex-col justify-start px-7 md:px-11 pt-7 pb-12 md:row-start-2">
-          <p {...anim('300ms')} className={anim('300ms').className + ' font-light leading-[2] text-[clamp(.85rem,1.1vw,1rem)] text-cream/78'}>
+          <p {...anim('300ms')} className={anim('300ms').className + ' font-light leading-[2] text-[clamp(.85rem,1.1vw,1rem)] text-white/80'}>
             語言、氣候、飲食、人文，都跟我合拍。有海、有山、有生活、還有一群好朋友。
           </p>
-          <p {...anim('450ms')} className={anim('450ms').className + ' font-light leading-[2] text-[clamp(.85rem,1.1vw,1rem)] text-cream/78 mt-3'}>
+          <p {...anim('450ms')} className={anim('450ms').className + ' font-light leading-[2] text-[clamp(.85rem,1.1vw,1rem)] text-white/80 mt-3'}>
             這裡很放鬆，頗有嘉義市慢活的步調。我真的開始想像，在這裡醒來的日常。
           </p>
           <div {...anim('600ms')} className={anim('600ms').className + ' flex flex-wrap gap-2 mt-6'}>
