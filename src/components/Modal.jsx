@@ -17,14 +17,14 @@ function Spinner() {
 }
 
 export default function Modal({ open, onClose }) {
-  const [form, setForm]     = useState({ name: '', phone: '', event: '' })
+  const [form, setForm]     = useState({ name: '', phone: '', age: '', event: '' })
   const [status, setStatus] = useState('idle') // idle | loading | success | error
 
   // Lock body scroll + reset form on close
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
     if (!open) {
-      const t = setTimeout(() => { setForm({ name: '', phone: '', event: '' }); setStatus('idle') }, 400)
+      const t = setTimeout(() => { setForm({ name: '', phone: '', age: '', event: '' }); setStatus('idle') }, 400)
       return () => clearTimeout(t)
     }
   }, [open])
@@ -48,7 +48,7 @@ export default function Modal({ open, onClose }) {
   }
 
   const chosen = EVENTS.find(ev => ev.id === form.event)
-  const valid  = form.name.trim() && form.phone.trim() && form.event
+  const valid  = form.name.trim() && form.phone.trim() && form.age.trim() && form.event
 
   return (
     <div
@@ -140,6 +140,23 @@ export default function Modal({ open, onClose }) {
                   value={form.phone}
                   onChange={set('phone')}
                   placeholder="0912 345 678"
+                  required
+                  className="w-full border border-ink/20 px-4 py-3 font-sans text-[.95rem] text-ink placeholder:text-ink-lt/50 focus:outline-none focus:border-navy transition-colors bg-transparent"
+                />
+              </div>
+
+              {/* 年齡 */}
+              <div>
+                <label className="block font-sans text-[.72rem] tracking-[.15em] text-ink-lt mb-1.5">
+                  年齡
+                </label>
+                <input
+                  type="number"
+                  min="1"
+                  max="120"
+                  value={form.age}
+                  onChange={set('age')}
+                  placeholder="例：45"
                   required
                   className="w-full border border-ink/20 px-4 py-3 font-sans text-[.95rem] text-ink placeholder:text-ink-lt/50 focus:outline-none focus:border-navy transition-colors bg-transparent"
                 />

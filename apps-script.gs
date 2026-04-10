@@ -11,14 +11,15 @@ function doPost(e) {
 
     const name  = e.parameter.name  || ''
     const phone = e.parameter.phone || ''
+    const age   = e.parameter.age   || ''
     const event = e.parameter.event || ''
     const time  = new Date()
 
     // 1. Write to sheet
-    sheet.appendRow([time, name, phone, event])
+    sheet.appendRow([time, name, phone, age, event])
 
     // 2. Send notification email
-    sendNotification(name, phone, event, time)
+    sendNotification(name, phone, age, event, time)
 
     return ContentService
       .createTextOutput(JSON.stringify({ ok: true }))
@@ -31,7 +32,7 @@ function doPost(e) {
   }
 }
 
-function sendNotification(name, phone, event, time) {
+function sendNotification(name, phone, age, event, time) {
   const subject = `【新報名】${name} · ${event}`
 
   const body = `
@@ -40,6 +41,7 @@ function sendNotification(name, phone, event, time) {
 ────────────────
 姓名：${name}
 電話：${phone}
+年齡：${age}
 場次：${event}
 時間：${time.toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' })}
 ────────────────
