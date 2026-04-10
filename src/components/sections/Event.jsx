@@ -61,14 +61,14 @@ export default function Event({ onActive, onOpenModal }) {
           {/* Header */}
           <div {...anim('0ms')} className={anim('0ms').className + ' text-center mb-14'}>
             <span className="inline-block bg-gold text-warm-dk font-sans text-[.68rem] tracking-[.3em] px-4 py-1 mb-6">
-              04 / 13 &nbsp;·&nbsp; 嘉義
+              04 / 13 嘉義 &nbsp;·&nbsp; 04 / 14 高雄
             </span>
             <h2 className="text-[clamp(1.75rem,3.5vw,3rem)] font-bold text-cream leading-[1.4] mb-5">
               暢享第二人生<br />暢遊美好檳城分享會
             </h2>
             <div className="flex justify-center flex-wrap gap-x-8 gap-y-2 font-sans text-[.92rem] text-gold-lt tracking-[.05em]">
-              <span>🕑&nbsp; 04/13（星期一）14:00</span>
-              <span>📍&nbsp; 嘉義安娜與國王酒店</span>
+              <span>🕑&nbsp; 04/13（一）嘉義安娜與國王飯店</span>
+              <span>🕑&nbsp; 04/14（二）高雄漢來大飯店 15F</span>
             </div>
           </div>
 
@@ -123,7 +123,7 @@ export default function Event({ onActive, onOpenModal }) {
                 'hover:-translate-y-[3px] hover:bg-gold-lt hover:shadow-[0_10px_30px_rgba(196,163,90,.35)]',
               ].join(' ')}
             >
-              立即報名 &nbsp;·&nbsp; 04/13 等你來
+              選擇場次 &nbsp;·&nbsp; 立即報名
             </button>
             <p className="mt-4 font-sans text-[.75rem] text-cream/30 tracking-[.15em]">
               入場免費 &nbsp;·&nbsp; 名額有限
