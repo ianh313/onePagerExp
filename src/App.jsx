@@ -3,14 +3,11 @@ import ProgressBar from './components/ProgressBar'
 import NavDots from './components/NavDots'
 import Modal from './components/Modal'
 import Hero from './components/sections/Hero'
-import Story from './components/sections/Story'
-import Reflection from './components/sections/Reflection'
-import Penang from './components/sections/Penang'
-import Thought from './components/sections/Thought'
-import Invitation from './components/sections/Invitation'
+import Context from './components/sections/Context'
+import People from './components/sections/People'
 import Event from './components/sections/Event'
 
-const TOTAL = 7
+const TOTAL = 4
 
 export default function App() {
   const [active, setActive] = useState(0)
@@ -45,13 +42,10 @@ export default function App() {
       <ProgressBar active={active} total={TOTAL} />
       <NavDots active={active} total={TOTAL} onGoTo={goTo} />
 
-      <Hero       onActive={() => setActive(0)} />
-      <Story      onActive={() => setActive(1)} />
-      <Reflection onActive={() => setActive(2)} />
-      <Penang     onActive={() => setActive(3)} />
-      <Thought    onActive={() => setActive(4)} />
-      <Invitation onActive={() => setActive(5)} />
-      <Event      onActive={() => setActive(6)} onOpenModal={openModal} />
+      <Hero    onActive={() => setActive(0)} />
+      <Context onActive={() => setActive(1)} />
+      <People  onActive={() => setActive(2)} />
+      <Event   onActive={() => setActive(3)} onOpenModal={openModal} />
 
       <Modal open={modalOpen} onClose={closeModal} />
     </div>

@@ -50,7 +50,7 @@ export default function Event({ onActive, onOpenModal }) {
 
   return (
     <section
-      id="section-6"
+      id="section-3"
       ref={ref}
       className="h-screen snap-start snap-always bg-navy flex flex-col overflow-hidden"
     >
