@@ -66,6 +66,7 @@ export default function Modal({ open, onClose }) {
       <div
         className={[
           'relative bg-cream text-ink w-full max-w-[480px] px-8 py-12 md:px-12',
+          'max-h-[90dvh] overflow-y-auto',
           'transition-all duration-[450ms] ease-[cubic-bezier(.22,.9,.3,1)]',
           open ? 'translate-y-0 scale-100' : 'translate-y-6 scale-[.97]',
         ].join(' ')}

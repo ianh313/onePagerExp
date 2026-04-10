@@ -37,7 +37,7 @@ export default function Context({ onActive }) {
         }}
       />
 
-      <div className="relative z-10 max-w-3xl px-10 py-24 text-center mx-auto">
+      <div className="relative z-10 max-w-3xl px-8 py-16 md:py-24 text-center mx-auto">
         <p
           {...anim('0ms')}
           className={anim('0ms').className + ' font-sans text-[.7rem] tracking-[.45em] text-gold mb-12'}

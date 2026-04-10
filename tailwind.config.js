@@ -39,6 +39,10 @@ export default {
       transitionDuration: {
         700: '700ms',
       },
+      // Use dynamic viewport height so sections fill the screen correctly
+      // even when the mobile browser address bar is visible
+      height:    { screen: '100dvh' },
+      minHeight: { screen: '100dvh' },
     },
   },
   plugins: [],

@@ -5,10 +5,13 @@
 html {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  /* Prevent rubber-band overscroll from fighting the snap */
+  overscroll-behavior: none;
 }
 
 @media (max-width: 768px) {
   html {
+    /* proximity feels more natural on touch — snaps when close, not forced */
     scroll-snap-type: y proximity;
   }
 }
@@ -16,4 +19,5 @@ html {
 /* Ensure font-serif applies to everything by default */
 body {
   font-family: 'Noto Serif TC', Georgia, serif;
+  overscroll-behavior: none;
 }

@@ -40,7 +40,7 @@ export default function People({ onActive }) {
       />
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-navy/80 via-transparent to-navy/80" />
 
-      <div className="relative z-10 max-w-3xl px-8 py-20 text-center mx-auto">
+      <div className="relative z-10 max-w-3xl px-8 py-14 md:py-20 text-center mx-auto">
 
         {/* Lead-in */}
         <p
